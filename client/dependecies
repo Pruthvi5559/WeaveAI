@@ -1,0 +1,39 @@
+npm i 
+    react ->  manage external libraries, automate build processes, and share reusable 
+        code components efficiently across projects
+
+    react-dom -> serves as the glue between React's core component logic and the 
+        browser's Document Object Model (DOM).
+
+    tailwindcss -> It lets you register Tailwind directly into your local build pipeline
+
+    tailwindcss/vite -> compiles your CSS utility classes natively during development and production builds
+
+    react-router-dom -> for implementing client-side routing in React web applications. 
+        It allows you to build single-page applications (SPAs) with multiple views, 
+        navigating between pages seamlessly without full browser reloads
+    
+    react-hot-toast ->  is a lightweight, highly customizable, 
+        and open-source notification library for React applications. 
+        It weighs under 5kb and provides smooth, animated push-style alerts 
+        (toasts) out of the box
+
+    lucide-react ->icon library that provides clean, consistent,
+        and customizable SVG icons as React components
+    
+    luxon (due to no maintainance of moment) -> modern JavaScript library 
+        designed for working with dates and times.
+
+    axios -> promise-based JavaScript HTTP client used in browsers and Node.js
+
+    @codesandbox/sandpack-react -> to embed live, interactive code editors and 
+        previews directly into your React applications. ( live editing of ai generated code )
+    
+    file-saver -> solution for saving files on the client-side 
+        (to add the codes to the sandbox as codes are saved in the sandbox)
+
+    jszip ->  lets you create, read, and edit ZIP files directly in your browser or Node.js ( to export the code )
+
+    lodash.debounce -> implement an auto-save feature in codesandbox using the lodash.debounce 
+        package by delaying your save function until the user stops typing for a set time.
+
