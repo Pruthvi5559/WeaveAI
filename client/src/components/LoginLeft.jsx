@@ -1,0 +1,25 @@
+import React from 'react'
+
+const LoginLeft = () => {
+  return (
+    <div className="flex flex-col justify-between w-full md:w-1/2 lg:w-2/5 bg-[url('/bg-img.png')] bg-cover bg-center bg-no-repeat p-8 lg:p-12 shrink-0 select-none min-h-screen">
+        <div className='flex items-center gap-3'>
+          <img src='/logo.svg' alt='Logo' className='size-9.5'/>
+          <span className='text-3xl lg:text-4xl font-medium text-white'>Weave AI</span>
+        </div>
+        <div>
+          <h2 className='text-2xl lg:text-3xl text-white font-medium leading-snug mb-3 tracking-tight'>
+            Build your presence on web
+          </h2>
+          <p className='text-zinc-200 text-sm lg:text-base leading-relaxed'>
+            Describe what you need, preview instantly, and customize your site 
+            in real-time. React with clean JSX, verified layouts, and instant 
+            code exports.
+          </p>
+          <p className='text-zinc-300 text-sm mt-8 lg:mt-12'>Copyright {new Date().getFullYear()} Weave AI</p>
+        </div>
+    </div>
+  )
+}
+
+export default LoginLeft
