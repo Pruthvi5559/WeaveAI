@@ -4,9 +4,9 @@ import jwt from 'jsonwebtoken'
 const JWT_SECRET = process.env.JWT_SECRET || "fallback_secret"
 
 // Helper to set cookie
-const setSessionCookie = (req, payload)=>{
+const setSessionCookie = (res, payload)=>{
     const token = jwt.sign(payload, JWT_SECRET, {expiresIn: "30d"})
-    re.cookie('token', token, {
+    res.cookie('token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: "lax",
@@ -57,7 +57,7 @@ export async function login(req, res){
 
     const user = await User.findOne({email: email.toLowerCase().trim()})
     if(!user){
-        res.status(400).json({error: "An account with this email already exists"})
+        res.status(401).json({error: "Invalid email or password"})
         return;
     }
 
@@ -82,7 +82,7 @@ export async function login(req, res){
 export async function logout(_req, res){
     res.cookie("token", "", {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "preoduction",
+        secure: process.env.NODE_ENV === "production",
         sameSite: "lax",
         maxAge: 0,
         path:"/",
