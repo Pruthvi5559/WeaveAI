@@ -39,7 +39,7 @@ export function AppContextProvider({children}){
     
     useEffect(()=>{
         checkSession()
-    },[])
+    },[checkSession])
 
 
     const login = async (email, password) => {
@@ -86,7 +86,7 @@ export function AppContextProvider({children}){
 
 
     //Project Actions
-    const loadProjects = async () =>{
+    const loadProjects = useCallback(async () =>{
         if(!user) return;
         try {
             const { data } = await api.get("/api/projects")
@@ -97,7 +97,7 @@ export function AppContextProvider({children}){
         }finally{
             setLoadingProjects(false);
         }
-    }
+    }, [user])
 
     const loadProject = useCallback(async (id, silent=false)=>{
         if(!user) return;
